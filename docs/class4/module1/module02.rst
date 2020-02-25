@@ -43,10 +43,10 @@ Checking:
 
 .. code-block:: shell
 
-  curl -G http://localhost/foo --data-urlencode "foo=привет"
-  Hello%20G%C3%BCnter
+  curl -G http://localhost/foo --data-urlencode "foo=Hello World"
+  Hello%20World
 
-  curl -G http://localhost/dec_foo --data-urlencode "foo=Hello Günter"
-  Hello Günter
+  curl -G http://localhost/dec_foo --data-urlencode "foo=Hello World"
+  Hello World
 
   docker stop njs_example
