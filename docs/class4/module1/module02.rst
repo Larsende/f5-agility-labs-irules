@@ -12,15 +12,16 @@ Lab 2 - Decode URI
 
    .. code-block:: nginx
 
-      ...
+       ...
 
-      http {
+       http {
          js_include example.js;
 
          js_set $dec_foo dec_foo;
 
          server {
       ...
+      
             location /foo {
                 return 200 $arg_foo;
             }
