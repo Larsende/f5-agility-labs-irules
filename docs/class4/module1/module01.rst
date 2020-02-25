@@ -2,14 +2,15 @@
 Lab 1 - Hello World
 ==================================
 
-Running inside Docker:
+
+#. Start an NGINX docker instance with the hello world app by running the following commands:  This places the hello.conf file and hello.js files into the running NGINX instance.
 
 .. code-block:: shell
 
   EXAMPLE=hello
   docker run --rm --name njs_example  -v $(pwd)/conf/$EXAMPLE.conf:/etc/nginx/nginx.conf:ro  -v $(pwd)/njs/$EXAMPLE.js:/etc/nginx/example.js:ro -p 80:80 -p 8090:8090 -d nginx
 
-nginx.conf:
+The nginx.conf will be as follows, notice it maps a /uri to a njs function:
 
 .. code-block:: nginx
 
@@ -33,7 +34,7 @@ nginx.conf:
    }
  }
 
-example.js:
+The njs example.js file is as follows.  Notice it has the 2 functions reference in the nginx.conf file:
 
 .. code-block:: js
 
@@ -45,16 +46,16 @@ example.js:
     r.return(200, "Hello world!\n");
   }
 
-Checking:
+#. To see what happens run the following commands from the linux shell:
 
-.. code-block:: shell
+   .. code-block:: shell
 
-  curl http://localhost/hello
-  Hello world!
+      curl http://localhost/hello
+      Hello world!
 
-  curl http://localhost/version
-  0.2.4
+      curl http://localhost/version
+      0.2.4
 
-  # Stopping.
-  docker stop njs_example
+      # Stopping.
+      docker stop njs_example
 
