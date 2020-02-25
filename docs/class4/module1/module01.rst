@@ -34,17 +34,17 @@ Lab 1 - Hello World
       }
     }
 
-   The njs example.js file is as follows.  Notice it has the 2 functions reference in the nginx.conf file:
+    The njs example.js file is as follows.  Notice it has the 2 functions reference in the nginx.conf file:
 
-  .. code-block:: js
+    .. code-block:: js
 
-     function version(r) {
-        r.return(200, njs.version);
-     }
+       function version(r) {
+          r.return(200, njs.version);
+       }
 
-     function hello(r) {
-        r.return(200, "Hello world!\n");
-     }
+       function hello(r) {
+          r.return(200, "Hello world!\n");
+       }
 
 #. To see what happens run the following commands from the linux shell:
 
