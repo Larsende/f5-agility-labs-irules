@@ -73,6 +73,11 @@ Downloading Lab Files
 
       git clone https://github.com/xeioex/njs-examples
       cd njs-examples
+
+#. Now type 'ls *' to show the files that were just downloaded to your Linux box.  The output is as follows:
+
+   .. code-block:: shell
+
       ls *
 
       README.rst
