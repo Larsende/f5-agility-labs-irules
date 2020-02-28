@@ -10,7 +10,7 @@ Protecting ``/secure/`` location from simple bots and web crawlers.
       EXAMPLE=secure_link_hash
       docker run --rm --name njs_example  -v $(pwd)/conf/$EXAMPLE.conf:/etc/nginx/nginx.conf:ro  -v $(pwd)/njs/$EXAMPLE.js:/etc/nginx/example.js:ro -p 80:80 -p 8090:8090 -d nginx
 
-    The nginx.conf will be as follows, notice that when going to the /secure/ URI you will redirect to a login error page unless the cookie exists.     
+   The nginx.conf will be as follows, notice that when going to the /secure/ URI you will redirect to a login error page unless the cookie exists.     
 
    .. code-block:: nginx
 
