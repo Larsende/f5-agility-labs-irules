@@ -1,5 +1,5 @@
 Lab 3 - Injecting HTTP header using stream proxy
-========================================
+================================================
 
 #. Start an NGINX docker instance with the inject_header app by running the following commands:  This places the inject_header.conf file and inject_header.js files into the running NGINX instance.
 

@@ -1,5 +1,5 @@
 Lab 7 - Complex redirects using njs file map.
-========================================
+=============================================
 
 Running inside Docker:
 
